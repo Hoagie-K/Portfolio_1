@@ -1,0 +1,647 @@
+@charset "utf-8";
+
+#wrap {
+	/* border: 1px solid burlywood; */
+	width: 1900px;
+}
+
+header {
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	/* border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	opacity: 0.5; */
+}
+
+header > nav {
+	width: 430px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+header > nav > .gnb {
+	/* border: 1px solid blue; */
+	display: flex;
+	justify-content: space-between;
+}
+
+header > nav > .gnb > li {
+	/* border: 1px solid pink; */
+	position: relative;
+	width: 100px;
+	box-sizing: border-box;
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 500;
+	color: #ccc;
+	text-align: center;
+}
+
+header > nav > .gnb > li:hover > a {
+	font-weight: 800;
+}
+
+header > nav > .gnb > li:hover > .lnb {
+	display: block;
+}
+
+header > nav .lnb {
+	display: none;
+	position: absolute;
+	top: 40px;
+	width: 100px;
+	/* background-color: #fff; */
+	/* border: 1px solid #ccc; */
+	box-sizing: border-box;
+}
+
+header > nav .lnb > li > a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 500;
+	color: #ccc;
+	text-align: center;
+}
+
+header > nav > .gnb > li.on > a {
+	font-weight: 800;
+	/* background-color: #fff; */
+}
+
+header > nav .lnb > li > a:hover {
+	/* background-color: #ccc; */
+	font-weight: 800;
+}
+
+section {
+	width: 100%;
+	height: 1080px;
+}
+
+section > .arti-1 {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 1080px;
+	background-image: url(./../images/yangyang1.jpg);
+	background-size: cover;
+}
+
+section > .arti-1 > .blank {
+	display: block;
+	width: 100%;
+	height: 200px;
+	text-indent: -9999px;
+}
+
+section > .arti-1 > .logo {
+	/* border: 1px solid red; */
+	display: block;
+	width: 270px;
+	height: 210px;
+	background-image: url(./../images/ThankYou_YANGYANG.png);
+	background-size: cover;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+
+section > .arti-1 > .msl {
+	display: block;
+	width: 60px;
+	height: 100px;
+	text-indent: -9999px;
+	background-image: url(./../images/MouseScrollLogo.png);
+	background-repeat: no-repeat;
+	background-size: 60px 100px;
+	margin: 250px auto 0 auto;
+	animation: scaleBounce 1.5s alternate infinite;
+}
+
+@keyframes scaleBounce {
+	from {
+		transform: scale(.7);
+	}
+	to {
+		transform: scale(.8);
+	}
+}
+
+section > .arti-2 {
+	z-index: 10;
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 1080px;
+	background-image: url(./../images/TravelBG.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 0;
+	/* -webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px); */
+
+	/* section > .arti-2 > .blank,
+	section > .arti-2 > h2,
+	section > .arti-2 > p,
+	section > .arti-2 > p > span,
+	section > .arti-2 > p > span > a {
+		filter: none;
+	} */
+}
+
+section > .arti-2 > .blank {
+	z-index: 11;
+	display: block;
+	width: 100%;
+	height: 100px;
+}
+
+section > .arti-2 > h2 {
+	color: #ccc;
+	text-align: center;
+	font-size: 42px;
+	font-weight: 800;
+	margin-bottom: 50px;
+}
+
+#slides {
+	overflow: hidden;
+	position: relative; /* 페이지네이션, 이전다음버튼에 대한 기준점 */
+	width: 1500px;
+	height: 530px;
+	/* outline: 1px solid red; */
+	margin: 0 0 0 250px;
+}
+
+#slides > ul {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: flex;
+	width: 400%;
+}
+
+#slides > .slides-container > li {
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+#slides > .slides-container > li > a {
+	display: block;
+	height: 530px;
+	line-height: 530px;
+	font-size: 24px;
+	font-weight: 500;
+	color: #ccc;
+	text-align: center;
+	margin: 720px auto 0 auto;
+}
+
+#slides > .slides-nav {
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: 80px;
+	height: 100px;
+	color: #ccc;
+	font-weight: 800;
+	font-size: 20px;
+	margin-top: -50px;
+	margin: 0 0 0 500px;
+	text-indent: -9999px;
+}
+
+#slides > .slides-nav.slides-prev {
+	left: -450px;
+	background-position: -5px -5px;
+	background-image: url(./../images/btn_pic_prev.png);
+}
+#slides > .slides-nav.slides-next {
+	right: 10px;
+	background-position: -5px -5px;
+	background-image: url(./../images/btn_pic_next.png);
+}
+
+#slides > .slides-nav.slides-prev:hover {
+	background-image: url(./../images/btn_pic_prev_on.png);
+}
+
+#slides > .slides-nav.slides-next:hover {
+	background-image: url(./../images/btn_pic_next_on.png);
+}
+
+#slides > ul > li:nth-of-type(1) {
+	background-image: url(./../images/naksan_temple_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 1500px 530px;
+	background-position: center 0;
+}
+
+#slides > ul > li:nth-of-type(2) {
+	background-image: url(./../images/hottub1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 1500px 530px;
+	background-position: center 0;
+}
+
+#slides > ul > li:nth-of-type(3) {
+	background-image: url(./../images/Hajodea1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 1500px 530px;
+	background-position: center 0;
+}
+
+#slides > ul > li:nth-of-type(4) {
+	background-image: url(./../images/huehueam1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 1500px 530px;
+	background-position: center 0;
+}
+
+#slides > ul > li > a:hover {
+	font-weight: 1000;
+	animation: scale 1.5s alternate;
+}
+
+@keyframes scale {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.8);
+	}
+}
+
+#slides > .slides-pagination {
+	display: flex;
+	justify-content: space-between;
+
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	width: 74px;
+	margin-left: -37px;
+}
+
+#slides > .slides-pagination > li {
+	width: 18px;
+	background-image: url(./../images/bul.png);
+}
+
+#slides > .slides-pagination > li.on {
+	background-position: 0 -18px;
+}
+
+#slides > .slides-pagination > li > a {
+	display: block;
+	height: 18px;
+	text-indent: -9999px;
+}
+
+section > .arti-3 {
+	display: block;
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 1080px;
+	line-height: 100%;
+	background-image: url(./../images/HotelBG2.jpg);
+	background-repeat: no-repeat;
+	/* background-size: cover; */
+	background-size: 100% 1080px;
+}
+
+section > .arti-3 > .text {
+	/* border: 1px solid red; */
+	width: 600px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 30px;
+	text-align: justify;
+	padding-top: 300px;
+	padding-left: 360px;
+	/* margin: 350px auto auto 300px; */
+}
+
+section > .arti-3 > .btn {
+	display: flex;
+}
+
+section > .arti-3 > .btn > a {
+	display: block;
+	border: 2px solid #fff;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}
+
+section > .arti-3 > .btn {
+	font-size: 16px;
+}
+
+section > .arti-3 > .btn > a:hover {
+	font-weight: 800;
+}
+
+section > .arti-3 > .btn > a:nth-of-type(1) {
+	margin: 170px 0 auto 360px;
+}
+
+section > .arti-3 > .btn > a:nth-of-type(2) {
+	margin: 170px auto auto 20px;
+}
+
+section > .arti-4 {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 1080px;
+	background-image: url(./../images/ServiceCenter.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 1080px;
+}
+
+section > .arti-4 > .main {
+	display: block;
+	font-size: 50px;
+	padding-top: 150px;
+	padding-left: 360px;
+}
+
+section > .arti-4 > .sc {
+	display: flex;
+}
+
+section > .arti-4 > .sc > a {
+	display: block;
+	border: 2px solid #000;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+section > .arti-4 > .sc > a:hover {
+	font-weight: 800;
+}
+
+section > .arti-4 > .sc > a:nth-of-type(1) {
+	margin: 50px 0 auto 360px;
+}
+
+section > .arti-4 > .sc > a:nth-of-type(2) {
+	margin: 50px auto auto 20px;
+}
+
+footer > address {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	margin: 3240px auto 0 auto;
+	padding-top: 30px;
+	background-color: #ccc;
+}
+
+footer > address > span {
+	font-style: italic;
+}
+
+@media screen and (max-width: 1280px) {
+	#wrap {
+		width: 100%;
+	}
+
+	header {
+		z-index: 9999;
+		position: fixed;
+		width: 100%;
+		height: 40px;
+	}
+
+	section {
+		width: 100%;
+		height: 1024px;
+	}
+
+	section > .arti-1 {
+		width: 100%;
+		height: 1024px;
+	}
+
+	section > .arti-2 {
+		width: 100%;
+		height: 1024px;
+	}
+
+	#slides {
+		overflow: hidden;
+		position: relative; /* 페이지네이션, 이전다음버튼에 대한 기준점 */
+		width: 1000px;
+		height: 530px;
+		/* outline: 1px solid red; */
+		margin: 0 0 0 100px;
+	}
+
+	#slides > .slides-container {
+		width: 400%;
+		height: 1024px;
+	}
+
+	#slides > .slides-container > li {
+		width: 100%;
+		height: 530px;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	#slides > .slides-container > li > a {
+		/* margin: 500px auto 0 auto; */
+	}
+
+	#slides > .slides-container > li > a :hover {
+		animation: scale 1.5s alternate;
+	}
+
+	@keyframes scale {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.4);
+		}
+	}
+
+	section > .arti-3 {
+		width: 100%;
+		height: 1024px;
+		line-height: 100%;
+	}
+
+	section > .arti-3 > .text {
+		padding-top: 230px;
+		padding-left: 260px;
+	}
+
+	section > .arti-3 > .btn {
+		font-size: 16px;
+	}
+
+	section > .arti-3 > .btn > a:hover {
+		font-weight: 800;
+	}
+
+	section > .arti-3 > .btn > a:nth-of-type(1) {
+		margin: 170px 0 auto 260px;
+	}
+
+	section > .arti-4 {
+		height: 1024px;
+	}
+
+	section > .arti-4 > .main {
+		padding-top: 150px;
+		padding-left: 260px;
+	}
+
+	section > .arti-4 > .sc > a:nth-of-type(1) {
+		margin: 50px 0 auto 260px;
+	}
+
+	footer > address {
+		width: 100%;
+		height: 50px;
+		margin: 3072px auto 0 auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#wrap {
+		width: 100%;
+	}
+
+	header {
+		z-index: 9999;
+		position: fixed;
+		width: 100%;
+		height: 40px;
+	}
+
+	section {
+		width: 100%;
+		height: 1024px;
+	}
+
+	section > .arti-1 {
+		width: 100%;
+		height: 1024px;
+	}
+
+	section > .arti-2 {
+		width: 100%;
+		height: 1024px;
+	}
+
+	#slides {
+		overflow: hidden;
+		position: relative; /* 페이지네이션, 이전다음버튼에 대한 기준점 */
+		width: 600px;
+		height: 530px;
+		/* outline: 1px solid red; */
+		margin: 0 0 0 100px;
+	}
+
+	#slides > ul {
+		width: 400%;
+		height: 1024px;
+	}
+
+	#slides > ul > li {
+		width: 100%;
+		height: 530px;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	#slides > ul > li > a {
+		/* margin: 500px auto 0 auto; */
+	}
+
+	#slides > ul > li > a :hover {
+		animation: scale 1.5s alternate;
+	}
+
+	@keyframes scale {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.4);
+		}
+	}
+
+	#slides > .slides-nav.slides-prev {
+		left: -480px;
+		background-position: -5px -5px;
+		background-image: url(./../images/btn_pic_prev.png);
+	}
+	#slides > .slides-nav.slides-next {
+		right: 10px;
+		background-position: -5px -5px;
+		background-image: url(./../images/btn_pic_next.png);
+	}
+
+	section > .arti-3 {
+		width: 100%;
+		height: 1024px;
+		line-height: 100%;
+	}
+
+	section > .arti-3 > .text {
+		padding-top: 230px;
+		padding-left: 150px;
+	}
+
+	section > .arti-3 > .btn {
+		font-size: 16px;
+	}
+
+	section > .arti-3 > .btn > a:hover {
+		font-weight: 800;
+	}
+
+	section > .arti-3 > .btn > a:nth-of-type(1) {
+		margin: 170px 0 auto 150px;
+	}
+
+	section > .arti-4 {
+		height: 1024px;
+	}
+
+	section > .arti-4 > .main {
+		padding-top: 150px;
+		padding-left: 150px;
+	}
+
+	section > .arti-4 > .sc > a:nth-of-type(1) {
+		margin: 50px 0 auto 150px;
+	}
+
+	footer > address {
+		width: 100%;
+		height: 50px;
+		margin: 3072px auto 0 auto;
+	}
+}
